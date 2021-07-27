@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Villager = ({ image, japaneseName, quote }) => (
-  <figure>
+  <figure style={{ 
+    display: 'flex', 
+    flexDirection: 'column', 
+    alignItems: 'center', 
+    backgroundColor: '#90ee90',
+    borderRadius: '25px' }}>
     <img 
       src={image} 
       alt={japaneseName}

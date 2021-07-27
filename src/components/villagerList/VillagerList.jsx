@@ -4,7 +4,9 @@ import Villager from '../villager/Villager';
 
 export default function VillagerList({ villagers }){
   const villagerElements = villagers.map(villager => (
-    <li key={villager.id}>
+    <li 
+      key={villager.id} 
+    >
       <Villager
         {...villager}/>
     </li>
@@ -13,7 +15,7 @@ export default function VillagerList({ villagers }){
   return <ul style={{
     listStyle: 'none',
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',
     gridGap: '20px',
     margin: 0,
     alignItems: 'center',
