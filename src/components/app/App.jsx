@@ -1,5 +1,8 @@
+/* eslint-disable max-len */
 import React from 'react';
+import VillagerContainer from '../../containers/VillagerContainer.jsx';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <VillagerContainer/>;
 }
+
