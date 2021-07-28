@@ -5,13 +5,19 @@ import {
   Switch,
   Route } from 'react-router-dom';
 import VillagerContainer from '../../containers/VillagerContainer.jsx';
+import VillagerDetailContainer from '../../containers/VillagerDetailContainer.jsx';
+
 
 export default function App() {
   return (
     <Router>
       <Switch>
-        <Route to="/" component={VillagerContainer}/>
-
+        <Route path="/detail/:id">
+          <VillagerDetailContainer/>
+        </Route>
+        <Route path="/">
+          <VillagerContainer/>
+        </Route>
       </Switch>
     </Router>
   );

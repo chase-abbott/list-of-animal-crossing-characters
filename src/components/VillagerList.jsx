@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Villager from '../villager/Villager';
+import Villager from './Villager.jsx';
 
 export default function VillagerList({ villagers }){
   const villagerElements = villagers.map(villager => (
-    <li 
-      key={villager.id} 
-    >
+    <li key={villager.id} >
       <Villager
         {...villager}/>
     </li>
@@ -28,6 +26,7 @@ VillagerList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
       japaneseName: PropTypes.string.isRequired,
       quote: PropTypes.string.isRequired
     })

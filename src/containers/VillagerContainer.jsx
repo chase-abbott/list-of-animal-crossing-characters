@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import VillagerList from '../components/villagerList/VillagerList.jsx';
+import VillagerList from '../components/VillagerList.jsx';
 import { getVillagers } from '../services/animalCrossingAPI.js';
 import { mungeVillagers } from '../services/animalCrossingAPI.js';
 
 
-export default class App extends Component{
+export default class VillagerContainer extends Component{
   state = {
     isLoading: true,
     villagers: []
@@ -16,8 +16,7 @@ export default class App extends Component{
     return this.setState({ isLoading: false, villagers });
   }
 
-  render()
-  {
+  render(){
     const { villagers } = this.state; 
     if(this.state.isLoading) return <h1> Loading... </h1>;
     return (
